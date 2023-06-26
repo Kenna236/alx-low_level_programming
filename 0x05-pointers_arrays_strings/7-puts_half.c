@@ -1,28 +1,28 @@
 #include "main.h"
 
 /**
- * puts2 - a function that prints every other character of a string,
- * starting with the first character
- * @str: string
+ * puts_half - function that prints half of a string
+ * @str: input string to be printed
+ * Description: prints second half of string
  *
  */
 
-void puts2(char *str)
+void puts_half(char *str)
 {
 	int i, j;
 
 	i = 0;
-	j = 0;
 
 	while (str[i] != '\0')
-	{
 		i++;
-	}
 
-	while (j < i)
+	j = i / 2;
+		if (i % 2 == 1)
+			j++;
+	while  (j < i)
 	{
 		_putchar(str[j]);
-		j += 2;
+		j++;
 	}
 	_putchar('\n');
 }
